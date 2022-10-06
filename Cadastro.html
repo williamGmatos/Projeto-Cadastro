@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Imagens/icone.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <main>
+        <section id="formulario">
+            <h1>Cadastre-se</h1>
+            <form action="login.php" method="post">
+                <div>
+                    <input class="inputs" type="text" name="nome" id="nome" placeholder="Nome" required>
+                    <input class="inputs" type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome" required>
+                </div>
+                <div>
+                    <input class="inputs" type="email" name="email" id="email" placeholder="E-mail" required>
+                </div>
+                <div>
+                    <select name="genero" id="genero">
+                        <option value="escolha">Qual o seu gênero?</option>
+                        <option value="masc">Masculino</option>
+                        <option value="femi">Feminino</option>
+                        <option value="não">Prefiro não informar</option>
+                    </select>
+                    <input class="inputs" type="number" name="celular" id="celular" placeholder="Telefone" autocomplete="cc-number">
+                </div>
+                <div>
+                    <input class="inputs" type="password" name="senha" id="senha" placeholder="Senha" minlength="8" required>
+                    <input class="inputs" type="password" name="conf-senha" id="conf-senha" placeholder="Confirmar" minlength="8" required>
+                </div>
+                <div id="check">
+                    <input class="inputs" type="checkbox" name="Msenha" id="Msenha"> <p><label for="Msenha">Mostrar senha</label></p>
+                </div>
+                <div id="locon">
+                    <p>Fazer Login</p>
+                    <input id="sub" type="submit" value="Confirmar" onclick="confirmar()">
+                </div>
+            </form>
+        </section>
+        <section id="empresa">
+            
+        </section>
+    </main>
+    <script src="cadastro.js"></script>
+</body>
+</html>

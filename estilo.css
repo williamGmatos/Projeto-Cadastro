@@ -1,0 +1,259 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(0, 0, 0, 0.363) url('Imagens/Fundo_céu.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: darken;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main section {
+    width: 440px;
+    height: 400px;
+}
+
+main section#formulario {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+main section#empresa {
+    background-image: url('Imagens/Empresa.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main section#formulario h1 {
+    text-align: center;
+    font-size: 2em;
+    padding: 20px;
+    background-image: url('Imagens/Gradiente-azuls.jpg');
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+main section#formulario {
+    background-color: rgb(230, 238, 243);
+}
+
+main section#formulario div {
+    margin: 0px 40px;
+    padding-top: 20px;
+}
+
+main section#formulario input#nome, input#sobrenome, input#email, input#celular, input#senha, input#conf-senha {
+    padding: 8px 0px;
+    padding-left: 4px;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+input#email {
+    width: 96.7%;
+}
+
+main section#formulario input.inputs:focus {
+    background-color: rgb(222, 228, 236);
+    border: 1px solid rgb(2, 2, 54);
+}
+
+main section#formulario input::placeholder {
+    padding-left: 15px;
+}
+
+main section#formulario select {
+    padding: 8px 0px;
+    width: 48.5%;
+    /*width: 175px;*/
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid black;
+    height: 33px;
+    font-size: .75em;
+    color: rgb(59, 59, 59);
+    font-weight: bold;
+}
+
+main section#formulario select:focus {
+    background-color: rgb(222, 228, 236);
+    border: 1px solid rgb(2, 2, 54);
+}
+
+div#locon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding: 15px;
+}
+
+div#locon p {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: rgb(55, 83, 238);
+}
+
+div#locon p:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+main section input[type='submit'] {
+    background-color: #4688F1;
+    color: white;
+    cursor: pointer;
+    padding-right: 2px;
+    width: 100px;
+    border: none;
+    border-radius: 4px;
+    height: 35px;
+}
+
+main section input[type='submit']:hover {
+    background-color: rgb(70, 119, 209);
+}
+
+div#check {
+    display: flex;
+    align-items: center;
+    padding-left: 2px;
+}
+
+div#check p {
+    padding-left: 10px;
+}
+/* Tablet */
+@media screen and (min-width: 550px) and (max-width: 900px) {
+    body {
+        background-color: rgba(255, 0, 0, 0.678);
+    }
+
+    main section {
+        width: 250px;
+        height: 400px;
+    }
+
+    main section#formulario {
+        width: 290px;
+        height: 400px;
+    }
+
+    input {
+        width: 96.7px;
+    }
+
+    section#formulario select {
+        min-width: 99.5%;
+        /*min-width: 210px;*/
+    }
+
+    input#celular {
+        margin-top: 20px;
+        width: 97%;
+    }
+
+    input#email {
+        width: 96.7%;
+    }
+
+    input#Msenha {
+        width: 15px;
+    }
+
+    main section#formulario h1 {
+        font-size: 1.3em;
+        padding: 7px;
+        background-image: url('Imagens/Gradiente-azuls.jpg');
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    main section#formulario input::placeholder {
+        padding-left: 10px;
+    }
+}
+/* Celular */
+@media screen and (min-width: 0px) and (max-width: 549px) {
+    body {
+        background-color: rgba(38, 33, 65, 0.822);
+    }
+
+    main section {
+        width: 300px;
+        height: 400px;
+    }
+
+    main section#empresa {
+        height: 200px;
+        border-radius: 10px 10px 0px 0px;
+        width: 300px;
+    }
+
+    main section#formulario {
+        border-radius: 0px 0px 10px 10px;
+        height: 350px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    main section#formulario h1 {
+        font-size: 1.2em;
+        padding: 5px;
+    }
+
+    input#celular {
+        margin-top: 20px;
+    }
+
+    input#email {
+        width: 98%;
+    }
+
+    input#nome, input#sobrenome {
+        width: 46.2%;
+    }
+
+    section#formulario select#genero {
+        min-width: 46.2%;
+    }
+
+    input#celular {
+        width: 46.7%;
+    }
+
+    input#senha, input#conf-senha {
+        width: 46.1%;
+    }
+
+    main section#formulario input {
+        margin: 0px;
+        margin: 0px;
+    }
+}
